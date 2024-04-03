@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ghimire Careers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-OevHe/X+R7YkIZDRvUZKMRqM+0rBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        .navbar-custom {
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          font-size: 1em;
+          font-weight: bold;
+          padding: 0.5rem 1rem;
+        }
+        .navbar-brand img {
+          width: 30px;
+          height: 24px;
+        }
+        h1 {
+            font-size: 40px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: normal;
+            color: rgb(100, 100, 100);
+            text-align: center;
+        }
+        #tekImage {
+            height: 360px;
+        }
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+            color: rgb(100, 100, 100);
+            text-align: center;
+            font-weight: normal;
+        }
+        .tekParagrpahClass {
+            font-family: 'Roboto', sans-serif;
+            color: rgb(80, 80, 80);
+        }
+        #Paragrapher_container {
+            max-width: 720px;
+            margin: auto;
+        }
+        .border-bottom {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+  {% include 'nav.html' %}
+  <div id="Paragrapher_container">
+      <h1>Ghimire Careers</h1>
+      <img id="tekImage" src="static/tekimage.jpeg" height="320">
+      <h2>About Ghimire Carrier</h2>
+      <p class="tekParagrpahClass">
+          Ghimire Carrier has been at the forefront of logistics and transportation services in the region since its
+          inception. With a fleet that spans across the latest in technology-driven vehicles, we ensure timely and safe
+          delivery of goods across various terrains and distances. Our commitment to excellence is evident in our
+          meticulous planning and execution of complex logistics operations, which are tailored to meet the unique needs
+          of our clients. From local deliveries to international shipping, Ghimire Carrier provides comprehensive
+          solutions that are both efficient and cost-effective.
+      </p>
+      <p class="tekParagrpahClass">
+          Our ethos is built on the foundation of trust and reliability, which is why we have a longstanding rapport
+          with our clientele. We believe in fostering partnerships that go beyond mere business transactions. Ghimire
+          Carrier is more than a service provider; we are your strategic ally in facilitating growth and expansion. Our
+          dedicated team of experts works tirelessly to ensure that every consignment reaches its destination on schedule,
+          every time. Embracing innovation, we continually evolve our services to address the dynamic demands of the
+          market and set new industry standards.
+      </p>
+      <h2>Our Positions</h2>
+      <div>
+        {% for job in jobs %}
+          {% include "jobTitle.html" %}
+        {% endfor %}
+      </div>
+      <div style="text-align: center;">
+          <a class="btn btn-primary" href="mailto:tek ghimire?subject=contect%20us%20&body=your%20question%20%3A">Contact Us</a>
+      </div>
+  </div>
+  {%include 'footer.html'%}
+</body>
+</html>
