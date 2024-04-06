@@ -26,4 +26,3 @@ def loadjobfromDB():
 
 
 
-
