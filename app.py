@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 from flask import Flask, jsonify, render_template
 from tekDB import loadjobfromDB
 
@@ -17,4 +16,4 @@ def list_jobs():
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)
-<<<<<<< HEAD
+dfgfg

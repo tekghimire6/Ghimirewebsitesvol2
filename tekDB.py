@@ -14,7 +14,8 @@ ssl_args = {'ssl': {'ca': './global-bundle.pem'}}
 # Construct your connection string
 connection_string = f"mysql+pymysql://{user}:{password}@{endpoint}/{database_name}"
 
-# Create the engine with the SSL arguments
+# Create the engine with the SSL arguments hjsfadj 
+#&&dsjfkjsdf 
 engine = create_engine(connection_string, connect_args=ssl_args)
 
 def loadjobfromDB():
@@ -25,3 +26,8 @@ def loadjobfromDB():
       jobs.append(row)
     print(type(jobs))
     return jobs
+
+
+
+
+
