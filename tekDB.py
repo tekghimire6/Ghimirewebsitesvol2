@@ -26,3 +26,24 @@ def loadjobfromDB():
 
 
 
+
+def load_job_fromDB(id):
+  with engine.connect() as conn:
+      result = conn.execute(
+          text("SELECT * FROM jobs WHERE id = :val"),
+          {'val': id}
+      )
+      rows = result.all()
+      print("row type", type(rows))
+
+      if not rows:
+          return None
+      else:
+          first_row = rows[0]
+          # Use the _asdict() method to convert RowProxy to a dict
+          return first_row._asdict()
+
+
+
+
+    
