@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, request
 from tekDB import loadjobfromDB, load_job_fromDB
 
 app = Flask(__name__)
@@ -20,6 +20,12 @@ def show_job(id):
     return "Not Found", 404
   return render_template('jobpage.html', job=jobs_id)
   
+@app.route('/jobs/<id>/apply', methods=['POST'])
+def apply_to_thejobs(id):
+  data = request.form
+  return jsonify(data)
+  
+
 
 
 if __name__ == '__main__':
