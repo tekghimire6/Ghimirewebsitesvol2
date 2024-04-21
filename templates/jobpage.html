@@ -5,6 +5,7 @@
     {% include 'bootstrap.html'%}
 </head>
 <body>
+  <div> 
     {% include 'nav.html' %}
     {% include 'bannerImage.html' %}  
     <h3>Title</h3>
@@ -21,6 +22,8 @@
 
     <h3>Requirements</h3>
     <p>{{ job.requirements }}</p>
-    {% include 'footer.html' %}
+    {% include 'applicationForm.html'%}
+  </div>
+  {% include 'footer.html' %}
 </body>
 </html>
