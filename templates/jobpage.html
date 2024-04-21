@@ -2,9 +2,11 @@
 <html>
 <head>
     <title>Ghimire Careers</title>
+    {% include 'bootstrap.html'%}
 </head>
 <body>
-
+    {% include 'nav.html' %}
+    {% include 'bannerImage.html' %}  
     <h3>Title</h3>
     <p>{{ job.title }}</p>
 
@@ -19,6 +21,6 @@
 
     <h3>Requirements</h3>
     <p>{{ job.requirements }}</p>
-
+    {% include 'footer.html' %}
 </body>
 </html>
